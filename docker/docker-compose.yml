@@ -8,7 +8,6 @@ services:
     image: symfony_app:latest
     container_name: symfony_app
     volumes:
-      - ..:/var/www/html
       - /var/www/html/vendor
     ports:
       - "4000:4000"

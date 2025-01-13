@@ -19,5 +19,4 @@ RUN chown -R www-data:www-data /var/www/html
 # Exposer le port par défaut de PHP-FPM
 EXPOSE 4000
 
-# Commande de démarrage
-CMD ["php", "-S", "0.0.0.0:4000", "-t", "/var/www/html/public"]
+CMD ["tail", "-f", "/dev/null"]

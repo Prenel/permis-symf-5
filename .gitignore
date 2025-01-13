@@ -7,4 +7,5 @@
 /public/bundles/
 /var/
 /vendor/
+/docker/docker-compose.yml
 ###< symfony/framework-bundle ###

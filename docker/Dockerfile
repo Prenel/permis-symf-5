@@ -14,7 +14,7 @@ WORKDIR /var/www/html
 COPY ../ /var/www/html/
 
 # Donner les permissions à www-data pour Symfony
-# RUN chown -R www-data:www-data /var/www/html
+RUN chown -R www-data:www-data /var/www/html
 
 # Exposer le port par défaut de PHP-FPM
 EXPOSE 4000

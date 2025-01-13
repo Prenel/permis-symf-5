@@ -11,6 +11,8 @@ COPY --from=composer:2.6 /usr/bin/composer /usr/bin/composer
 # Définir le répertoire de travail
 WORKDIR /var/www/html
 
+COPY ../ /var/www/html/
+
 # Donner les permissions à www-data pour Symfony
 RUN chown -R www-data:www-data /var/www/html
 

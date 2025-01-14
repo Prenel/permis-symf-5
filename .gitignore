@@ -8,4 +8,5 @@
 /var/
 /vendor/
 /docker/docker-compose.yml
+.dockerignore
 ###< symfony/framework-bundle ###

@@ -2,8 +2,9 @@
 FROM php:8.2-fpm-alpine
 
 # Installer les dépendances nécessaires
-RUN apk update && apk add --no-cache bash icu-dev git unzip vim mysql-client \
-    && docker-php-ext-install intl pdo pdo_mysql
+RUN apk update && apk add --no-cache bash icu-dev git unzip vim mysql-client postgresql-dev \
+    && docker-php-ext-install intl pdo pdo_pgsql
+
 
 # Installer Composer
 COPY --from=composer:2.6 /usr/bin/composer /usr/bin/composer
@@ -11,7 +12,7 @@ COPY --from=composer:2.6 /usr/bin/composer /usr/bin/composer
 # Définir le répertoire de travail
 WORKDIR /var/www/html
 
-COPY ../ /var/www/html/
+COPY ../vendor /var/www/html/vendor/
 
 # Donner les permissions à www-data pour Symfony
 RUN chown -R www-data:www-data /var/www/html

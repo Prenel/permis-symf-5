@@ -3,7 +3,7 @@ FROM php:8.2-fpm-alpine
 
 # Installer les dépendances nécessaires
 RUN apk update && apk add --no-cache bash icu-dev git unzip vim mysql-client postgresql-dev \
-    && docker-php-ext-install intl pdo pdo_pgsql
+    && docker-php-ext-install intl pdo pdo_pgsql pdo_mysql
 
 
 # Installer Composer

@@ -12,11 +12,11 @@ class Kernel extends BaseKernel
 
     protected function configureRoutes(RoutingConfigurator $routes): void
     {
-        // Charge les fichiers YAML pour les routes classiques
-        $routes->import('../config/{routes}/' . $this->environment . '/*.yaml');
-        $routes->import('../config/{routes}/*.yaml');
+        // // Charge les fichiers YAML pour les routes classiques
+        // $routes->import('../config/{routes}/' . $this->environment . '/*.yaml');
+        // $routes->import('../config/{routes}/*.yaml');
 
-        // Charge les routes définies par des attributs PHP 8 dans src/Controller/
-        $routes->import('../src/Controller/', 'attribute');
+        // // Charge les routes définies par des attributs PHP 8 dans src/Controller/
+        // $routes->import('../src/Controller/', 'attribute');
     }
 }

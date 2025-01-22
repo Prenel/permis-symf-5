@@ -17,6 +17,6 @@ class Kernel extends BaseKernel
         $routes->import('../config/{routes}/*.yaml');
 
         // Charge les routes définies par des attributs PHP 8 dans src/Controller/
-        $routes->import('../src/Controller/', 'attribute');
+        $routes->import('../src/Controller/', 'annotation');
     }
 }

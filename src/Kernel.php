@@ -14,6 +14,6 @@ class Kernel extends BaseKernel
     {
         // Charge uniquement les fichiers YAML
         $routes->import('../config/{routes}/' . $this->environment . '/*.yaml');
-        $routes->import('../config/{routes}/*.yaml');
+        // $routes->import('../config/{routes}/*.yaml');
     }
 }

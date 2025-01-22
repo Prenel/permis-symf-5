@@ -10,12 +10,13 @@ class Kernel extends BaseKernel
 {
     use MicroKernelTrait;
 
-    // protected function configureRoutes(RoutingConfigurator $routes): void
-    // {
-    //     $routes->import('../config/{routes}/' . $this->environment . '/*.yaml');
-    //     $routes->import('../config/{routes}/*.yaml');
+    protected function configureRoutes(RoutingConfigurator $routes): void
+    {
+        // Charge les fichiers YAML pour les routes classiques
+        $routes->import('../config/{routes}/' . $this->environment . '/*.yaml');
+        $routes->import('../config/{routes}/*.yaml');
 
-    //     // Charge les routes définies par des attributs
-    //     $routes->import('../src/Controller/', 'annotation');
-    // }
+        // Charge les routes définies par des attributs PHP 8 dans src/Controller/
+        $routes->import('../src/Controller/', 'attribute');
+    }
 }

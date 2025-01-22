@@ -8,9 +8,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class QuestionController extends AbstractController
 {
-    /**
-     * @Route("/question", name="app_question")
-     */
+    #[Route('/question', name: 'app_question')]
     public function index(): Response
     {
         return $this->render('question/index.html.twig', [
